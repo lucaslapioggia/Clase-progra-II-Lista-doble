@@ -1,0 +1,16 @@
+nodo2* borrarPrimerNodo2(nodo2 * lista)
+{
+   if(lista!=NULL)
+   {
+     nodo2* aBorrar = lista;
+     lista= lista->siguiente;
+     if(lista!= NULL)
+     {
+       lista->anterior=NULL; ///+
+     }
+     
+     free(aBorrar);
+   }
+
+return lista;
+}
